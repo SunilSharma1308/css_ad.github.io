@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css_advanced.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&family=Barlow:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;1,700&family=Barlow:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Barlow:ital,wght@0,100;0,500;0,900;1,700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(e) {
+            $(".footer_sent").click(function() {
+                var sEmail = $(".input_email").val();
+                if ($.trim(sEmail).length == 0) {
+                    alert("Please enter valid email address");
+                    e.preventDefault();
+                }
+                if (validateEmail(sEmail)) {
+                    alert("Email is valid");
+                } else {
+                    alert("Invalid Email Address");
+                    e.preventDefault();
+                }
+            });
+        });
+
+        function validateEmail(sEmail) {
+            var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+            if (filter.test(sEmail)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        $(document).ready(function() {
+            $(".pop-up").hide();
+            $(".pop-up_background").hide();
+            $(".PURCHASE").click(function() {
+                $(".pop-up").show();
+                $(".container").hide();
+                $(".background").hide();
+                // $(".Customers").hide();
+                $(".pop-up_background").show();
+                $(".pop-up span").click(function() {
+                    $(".pop-up").hide();
+                    $(".pop-up_background").hide();
+                    $(".container").show();
+                    $(".background").show();
+
+                });
+            });
+            $(".DESIGN").click(function(a) {
+                $(".Design_third_column").hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="container">
+            <div class="header_content">
+                <div class="header_logo">
+                    <img src="images/head_logo.jpg">
+                </div>
+                <div class="header_nav_bar">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="#">PORTFOLIO</a></li>
+                        <li><a href="#">PRICE</a></li>
+                        <li>
+                            <div class="dropdown">
+                                <buttton class="dropdown"> <a href="#">BLOG <span>&#8964;</span></a></buttton>
+                                <div class="dropdown-content">
+                                    <div class="dropdown_link">
+                                        <a href="#">Link1</a>
+                                        <a href="#">Link2</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a><img src="images/mail.jpg"></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="business_contact" id="business">
+        <div class="background">
+            <div class="container">
+                <div class="business_center">
+                    <h1>We Will <span> Make</span>Your<span> Business</span> Great Again</h1>
+                    <p>Qnsectetur adipisicing elit. impedit repudiandae nisi maiores dolore dolor+</p>
+                    <div class="contact">
+                        <a class="button" href="#footer">CONTACT US</a>
+                        <a class="button" href="#">DISCOVER NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Hello_world">
+        <div class="container">
+            <div class="Hello_world_content">
+                <h2>Hello <span>World</span></h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> Fugit, optio ducimus doloremque dolore culpa quasi<br> sunt minima ratione sit corrupti tempora sapiente. </p>
+                <div class="Hello_world_icons">
+                    <div class="Hello_world_icon">
+                        <img src="images/icons/i-diamond_b.svg">
+                        <h5>Exploring your area of activity</h5>
+                    </div>
+                    <div class="Hello_world_icon">
+                        <img src="images/icons/i-wallet-d.svg">
+                        <h5>Competitive Analysis</h5>
+                    </div>
+                    <div class="Hello_world_icon">
+                        <img src="images/icons/i-trophy-d.svg">
+                        <h5>Do the work on time</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="Hello_world_picture">
+                <img src="images/img-3.jpg">
+            </div>
+        </div>
+    </div>
+    <div class="Services">
+        <div class="background">
+            <div class="container">
+                <div class="business_center">
+                    <h1>Some of our <span> Best Services </span> to solve your problems</h1>
+                    <div class="Services_content">
+                        <div class="Services_blocks">
+                            <div class="Services_content_image">
+                                <img src="images/icons/i-message_w.svg">
+                            </div>
+                            <h2>Digital Marketing</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum</p>
+                        </div>
+                        <div class="Services_blocks">
+                            <div class="Services_content_image">
+                                <img src="images/icons/i-feature_w.svg">
+                            </div>
+                            <h2>Web Development</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum</p>
+                        </div>
+
+                        <div class="Services_blocks">
+                            <div class="Services_content_image">
+                                <img src="images/icons/i-sketch_w.svg">
+                            </div>
+                            <h2>UI/UX Design</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum</p>
+                        </div>
+                    </div>
+                    <a class="button" href="#business">ORDER A SERVICE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Design">
+        <div class="container">
+            <h1><span>Good Design </span>is obvious<br> Great design is transparent.</h1>
+            <p><b>About Joe <span>&copy;</span></b> Graphics designer, digital literacy teacher.</p>
+            <div class="Design_navbar">
+                <ul>
+                    <li><a href="">SHOW ALL</a></li>
+                    <li><a class="DESIGN">DESIGN</a></li>
+                    <li><a href="">CODE</a></li>
+                    <li><a href="">ART</a></li>
+                </ul>
+            </div>
+            <div class="Design_images">
+                <div class="Design_first_column">
+                    <div class="first_column_1">
+                        <img src="images/12-min.jpg">
+                    </div>
+                    <div class="first_column_2">
+                        <img src="images/2-min.jpg">
+                    </div>
+                </div>
+                <div class="Design_second_column">
+                    <div class="second_column_1">
+                        <img src="images/2-min.jpg">
+                    </div>
+                    <div class="second_column_2">
+                        <img src="images/2-min.jpg">
+                    </div>
+                    <div class="second_column_3">
+                        <img src="images/2-min.jpg">
+                    </div>
+                </div>
+                <div class="Design_third_column">
+                    <div class="third_column_1">
+                        <img src="images/2-min.jpg">
+                    </div>
+                    <div class="third_column_2">
+                        <img src="images/12-min.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Customers">
+        <div class="background">
+
+            <div class="container">
+                <div class="Customers_contents">
+                    <div class="Customers_content">
+                        <img class="image_back" src="images/icons/i-team.svg">
+                        <div class="Customer_contents">
+                            <h2>Unique Customers:</h2>
+                            <p>3519+</p>
+                        </div>
+                    </div>
+                    <div class="Customers_content">
+                        <img class=" image_back " src="images/icons/i-shield.svg ">
+                        <div class="Customer_contents">
+
+                            <h2>Completed Projects:</h2>
+                            <p>3519+</p>
+                        </div>
+                    </div>
+                    <div class="Customers_content">
+                        <img class="image_back" src="images/icons/i-diamond.svg">
+                        <div class="Customer_contents">
+
+                            <h2>Happy Users: </h2>
+                            <p>3519+</p>
+                        </div>
+                    </div>
+                    <div class="Customers_content">
+                        <img class=" image_back " src="images/icons/i-trophy.svg ">
+                        <div class="Customer_contents">
+
+                            <h2>Honors and awards:</h2>
+                            <p>3519+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up_background">
+        <div class="pop-up">
+            <span>&#9747;</span>
+            <h1>Flexible pricing plans</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+
+
+    <div class="Prices">
+        <div class="container">
+            <h1>Flexible <span> Pricing</span> Plans</h1>
+            <p>Dolor sit Molitia harum ea it velit</p>
+            <div class="Prices_content ">
+                <div class="Prices_blocks ">
+                    <h2>Trial version</h2>
+                    <p>lorem ipsum dolor sit amet, adipiscing elit.</p>
+                    <h3><span>Free</span></h3>
+                    <p>
+                        <ul>
+                            <li>500gb drive space</li>
+                            <li> Unlimited messages
+                            </li>
+                            <li><span>Free Email Address</span></li>
+                            <li><span>Friendly support</span></li>
+                        </ul>
+                    </p>
+                    <a class="button" href="https://www.pdfdrive.com/download.pdf?id=10172273&h=84f0f3490acb0a861ce0cf97be914eed&u=cache&ext=pdf">DOWNLOAD</a>
+                </div>
+                <div class="Prices_blocks ">
+                    <h2>Regular</h2>
+                    <p>lorem ipsum dolor sit amet, adipiscing elit.</p>
+                    <h3>$ <span>19</span>/month</h3>
+                    <p>
+                        <ul>
+                            <li>500gb drive space</li>
+                            <li> Unlimited messages
+                            </li>
+                            <li>Free Email Address</li>
+                            <li><span>Friendly support</span></li>
+
+                        </ul>
+                    </p>
+                    <a class="PURCHASE ">PURCHASE</a>
+                </div>
+                <div class="Prices_blocks ">
+                    <h2>Extended</h2>
+                    <p>lorem ipsum dolor sit amet, adipiscing elit.</p>
+                    <h3>$ <span>29</span>/month</h3>
+                    <p>
+                        <ul>
+                            <li>500gb drive space</li>
+                            <li> Unlimited messages</li>
+                            <li>Free Email Address</li>
+                            <li>Friendly support</li>
+                        </ul>
+                    </p>
+                    <a class="button ">PURCHASE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Test ">
+        <div class="background ">
+            <div class="container ">
+                <div class="Test_header">
+                    <div class="Test_header_left">
+                        <h1><span>Testimonials </span>About Us</h1>
+                        <p>lorem ipsum dolor sit amet, adipiscing elit. </p>
+                    </div>
+                    <div class="Test_header_right">
+                        <div class="Test_arrow">
+                            <img src="images/icons/larrow.png">
+                        </div>
+                        <div class="Test_arrow">
+                            <img src="images/icons/rarrow.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="Test_contents ">
+                    <div class="Test_content ">
+                        <img class="test_image " src="images/t-1.jpeg ">
+                        <h3>Robert Newmen</h3>
+                        <h5>Microsoft Corporation</h5>
+                        <p>Dolar sit amit here is Robert Newmwn, microsoft corporation. Dolar sit amit here is Robert Newmwn, microsoft corporation.</p>
+                    </div>
+                    <div class="Test_content ">
+                        <img class="test_image " src="images/t-2.jpeg ">
+                        <h3>Robert Newmen</h3>
+                        <h5>Space X</h5>
+                        <p>Dolar sit amit here is Robert Newmwn, microsoft corporation. Dolar sit amit here is Robert Newmwn, microsoft corporation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Blog ">
+        <div class="container ">
+            <h1>Latest <span> Blog</span> Post</h1>
+            <p>Dolor sit Molitia harum ea it velit</p>
+            <div class="Blog_contents ">
+                <div class="Blog_content ">
+                    <img src="images/img-2.jpg ">
+                    <h2>fuga ab dolar sit molitia harum ea it velit</h2>
+                    <p>Dolar sit amit here is Robert Newmwn, microsoft corporation.Dolar sit amit here is Robert Newmwn, microsoft corporation.</p>
+                    <a class="button ">READ MORE</a>
+                </div>
+                <div class="Blog_content ">
+                    <img src="images/img-2.jpg ">
+                    <h2>fuga ab dolar sit molitia harum ea it velit</h2>
+                    <p>Dolar sit amit here is Robert Newmwn, microsoft corporation.Dolar sit amit here is Robert Newmwn, microsoft corporation.</p>
+                    <a class="button ">READ MORE</a>
+                </div>
+                <div class="Blog_content ">
+                    <img src="images/img-2.jpg ">
+                    <h2>fuga ab dolar sit molitia harum ea it velit</h2>
+                    <p>Dolar sit amit here is Robert Newmwn, microsoft corporation.Dolar sit amit here is Robert Newmwn, microsoft corporation.</p>
+                    <a class="button ">READ MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Footer" id="footer">
+        <div class="container ">
+            <img class="Footer_image " src="images/logo-footer.jpg ">
+
+            <div class="Footer_content ">
+                <div>
+                    <h3>Company</h3>
+                    <ul>
+                        <li>ABOUT</li>
+                        <li>SUPPORT</li>
+                        <li>PRESS</li>
+                        <li>LEGAL & PRIVACY</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li>NEWS</li>
+                        <li>CONTACT US</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Social</h3>
+                    <ul>
+                        <li>FACEBOOK</li>
+                        <li> GOOGLE+</li>
+                        <li>TWITTER</li>
+                        <li>INSTAGRAM</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Subscribe newsletter</h3>
+                    <div class="Footer_search_box">
+                        <!-- <div class="Footer_box"> -->
+                        <input type="text " placeholder="email" class="input_email">
+                        <button class="footer_sent" value="Validate Email" type="submit"><img src="images/icons/i-message.svg"></button>
+                        <!-- <div class="Footer_sent"> -->
+                        <!-- <img src="images/icons/i-message_w.svg"> -->
+                        <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="Footer_border ">
+            </div>
+            <div class="Footer_content2 ">
+                <p>delectus culpa in nemo non repellted sunt, delectus culpa in nemo non repellted sunt, delectus culpa in nemo non repellted</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
